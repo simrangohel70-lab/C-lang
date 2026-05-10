@@ -1,0 +1,73 @@
+que 1 //
+
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    char *ptr;
+    int length = 0;
+
+    printf("Enter any string: ");
+    fgets
+(str, sizeof(str), stdin);
+
+    ptr = str;
+
+    while (*ptr != '\0')
+    {
+        length++;
+        ptr++;
+    }
+
+    printf("Length = %d", length);
+
+    return 0;
+}
+
+que 2 //
+
+#include<stdio.h>
+
+void cube(int *p)
+{
+    *p = (*p) * (*p) * (*p);
+}
+
+int main()
+{
+    int a[10][10], i, j, n;
+
+    printf("Enter array size: ");
+    scanf("%d",&n);
+
+    printf("Enter array elements:\n");
+
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            cube(&a[i][j]);
+        }
+    }
+
+    printf("Cubes of all elements:\n");
+
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
